@@ -2,8 +2,8 @@ import numpy as np
 import time
 import cv2
 
-# full_path_to_video = 'input/veremiy.mp4'
-path_to_video = 'input/iron_man.jpg'
+path_to_video = 'input/veremiy.mp4'
+# path_to_video = 'input/iron_man.jpg'
 path_to_output = 'output/test_0.avi'
 model = 'models/instance_norm/mosaic.t7'
 
@@ -11,6 +11,7 @@ model = 'models/instance_norm/mosaic.t7'
 def create_video_with_effect(full_path_to_video,
                              full_path_to_output,
                              input_model):
+
     writer = None
     cap = cv2.VideoCapture(full_path_to_video)
     net = cv2.dnn.readNetFromTorch(input_model)
